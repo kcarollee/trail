@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/p5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/addons/p5.sound.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="utf-8" />
+
+  </head>
+  <body style="background-color: black;">
+    <div>
+      <img src="./images/weblogo2.png" onmouseover="openNav()" style="width: 8vh; display:block; margin-top: 2vh; margin-left: 2vh;">
+    </div>
+    <a href="#">
+      <img src="./images/weblogo4.png" style="width: 20vh; position: absolute; top:2%; left: 80%;">
+    </a>
+    
+
+  
+    <div id="mySidenav" class="sidenav" onmousedown="closeNav()">
+      <br>
+      <br>
+      <br>
+      <a href="./menu_about/">
+        <img src="./images/about_button.png" style="width: 10vh;">
+      </a>
+      <a href="./menu_works/index.html">
+        <img src="./images/works_button.png" style="width: 10vh;">
+      </a>
+      <a href="./menu_works/index.html">
+        <img src="./images/type_button.png" style="width: 10vh;">
+      </a>
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    </div>
+    
+    <script>
+      function openNav() {
+        document.getElementById("mySidenav").style.width = "250px";
+      }
+      
+      function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+      }
+    </script>
+    
+    <script src="sketch.js" ></script>
+  </body>
+</html>
