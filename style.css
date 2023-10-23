@@ -54,9 +54,8 @@ li a img {
 }
 
 .sidenav .closebtn {
-  text-align: center;
   display: block;
-  margin-top: 2vh; margin-left: 2vh;
+  margin-top: 2vh; margin-left: 11.5vh;
 }
 
 @media screen and (max-height: 450px) {
