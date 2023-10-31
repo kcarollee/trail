@@ -70,6 +70,6 @@ li a img {
 }
 
 @font-face {
-  font-family: 'Silk Serif';
-  src: url();
+  font-family: 'Custom Font';
+  src: url(../fonts/SilkSerif-Medium.woff) format('woff');
 }

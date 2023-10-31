@@ -262,7 +262,7 @@ function setup() {
         let textElem = createElement('a', strArr[i]);
         textElem.style('color', 'white');
         textElem.style('font-size', '4vh');
-        textElem.style('font-family', 'Silk Serif');
+        textElem.style('font-family', 'Custom Font');
         textElem.posY = textElemPosYOffset + textElemPosYIncrement * i;
         textElem.posX = width * 0.25 + map(noise(noiseIncrement * noiseStep), 0, 1, -200, 200);
         textElem.position(textElem.posX, textElem.posY);
@@ -279,7 +279,7 @@ function setup() {
         textElem.style('color', 'rgb(100, 100, 100)');
         textElem.style('opacity', '90');
         textElem.style('font-size', '4vh')
-        textElem.style('font-family', 'Silk Serif');
+        textElem.style('font-family', 'Custom Font');
         textElem.posY = i * textElemPosYIncrement + textElemPosYOffset;
         textElem.posX = width * 0.25 + map(noise(noiseIncrement * noiseStep), 0, 1, -200, 200);
         textElem.style('white-space', 'nowrap');
@@ -296,7 +296,7 @@ function setup() {
         textElem.style('color', 'white');
         textElem.style('opacity', '90');
         textElem.style('font-size', '4vh')
-        textElem.style('font-family', 'Silk Serif');
+        textElem.style('font-family', 'Custom Font');
         textElem.posY = i * textElemPosYIncrement + textElemPosYOffset;
         textElem.posX = width * 0.25 + map(noise(noiseIncrement * noiseStep), 0, 1, -200, 200);
         textElem.style('white-space', 'nowrap');
@@ -313,7 +313,7 @@ function setup() {
         textElem.style('color', 'rgb(100, 100, 100)');
         textElem.style('opacity', '90');
         textElem.style('font-size', '4vh')
-        textElem.style('font-family', 'Silk Serif');
+        textElem.style('font-family', 'Custom Font');
         textElem.posY = i * textElemPosYIncrement + textElemPosYOffset;
         textElem.posX = width * 0.25 + map(noise(noiseIncrement * noiseStep), 0, 1, -200, 200);
         textElem.style('white-space', 'nowrap');
@@ -330,7 +330,7 @@ function setup() {
         textElem.style('color', 'white');
         textElem.style('opacity', '90');
         textElem.style('font-size', '4vh')
-        textElem.style('font-family', 'Silk Serif');
+        textElem.style('font-family', 'Custom Font');
         textElem.posY = i * textElemPosYIncrement + textElemPosYOffset;
         textElem.posX = width * 0.25 + map(noise(noiseIncrement * noiseStep), 0, 1, -200, 200);
         textElem.style('white-space', 'nowrap');
@@ -347,7 +347,7 @@ function setup() {
         textElem.style('color', 'rgb(100, 100, 100)');
         textElem.style('opacity', '90');
         textElem.style('font-size', '4vh')
-        textElem.style('font-family', 'Silk Serif');
+        textElem.style('font-family', 'Custom Font');
         textElem.posY = i * textElemPosYIncrement + textElemPosYOffset;
         textElem.posX = width * 0.25 + map(noise(noiseIncrement * noiseStep), 0, 1, -200, 200);
         textElem.style('white-space', 'nowrap');
@@ -364,7 +364,7 @@ function setup() {
         textElem.style('color', 'white');
         textElem.style('opacity', '90');
         textElem.style('font-size', '4vh')
-        textElem.style('font-family', 'Silk Serif');
+        textElem.style('font-family', 'Custom Font');
         textElem.posY = i * textElemPosYIncrement + textElemPosYOffset;
         textElem.posX = width * 0.25 + map(noise(noiseIncrement * noiseStep), 0, 1, -200, 200);
         textElem.style('white-space', 'nowrap');
@@ -381,7 +381,7 @@ function setup() {
         textElem.style('color', 'rgb(100, 100, 100)');
         textElem.style('opacity', '90');
         textElem.style('font-size', '4vh')
-        textElem.style('font-family', 'Silk Serif');
+        textElem.style('font-family', 'Custom Font');
         textElem.posY = i * textElemPosYIncrement + textElemPosYOffset;
         textElem.posX = width * 0.25 + map(noise(noiseIncrement * noiseStep), 0, 1, -200, 200);
         textElem.style('white-space', 'nowrap');
