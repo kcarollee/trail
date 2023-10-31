@@ -107,6 +107,14 @@ function setup() {
     charPosX;
     charPosY;
     imageMode(CENTER);
+
+    pixelDensity(1);
+    noiseGenFbo.pixelDensity(1);
+    noiseDispFbo.pixelDensity(1);
+    displaceFbo.pixelDensity(1);
+    displaceTextFbo.pixelDensity(1);
+    backgroundFbo.pixelDensity(1);
+    textFbo.pixelDensity(1);
 }
 
 function draw() {
