@@ -80,6 +80,7 @@ class ImageElement {
         this.imgElem.style('z-index', 0);
         this.imgElem.style('opacity', 0.5);
         this.imgElem.style('width', '20vw');
+        this.imgElem.style('overflow', 'hidden');
         
         //this.imgElem.style('filter', 'grayscale(100%)');
         this.imgElem.style('display', 'none');
@@ -221,6 +222,18 @@ function setup() {
 
         let imgElemTemp =  new ImageElement(posX, posY, './images/img_'  + (i + 1) + '.png', igLinks[i]);
         imgElemArr.push(imgElemTemp);
+    }
+
+    let isMobile = /iPhone|iPad|iPod|Android/i.test(window.navigator.userAgent);
+    //console.log(isMobile);
+    if (isMobile){
+        pixelDensity(0.75);
+        noiseGenFbo.pixelDensity(0.75);
+        noiseDispFbo.pixelDensity(0.75);
+        displaceFbo.pixelDensity(0.75);
+        displaceTextFbo.pixelDensity(0.75);
+        backgroundFbo.pixelDensity(0.75);
+        textFbo.pixelDensity(0.75);
     }
 }
 

@@ -17,7 +17,7 @@ let imgElemShowcount = 0;
 let testImgElem;
 
 let textElemArr = [];
-
+let isMobile;
 
 function preload() {
     noiseGenShader = loadShader('../shaders/noiseGenShader.vert', '../shaders/noiseGenShader.frag');
@@ -149,6 +149,8 @@ function setup() {
     mainCanvas.style('position', 'fixed');
     mainCanvas.style('z-index', '-1');
 
+    isMobile = /iPhone|iPad|iPod|Android/i.test(window.navigator.userAgent);
+
     /*
     image(displaceTextFbo, width * 0.5 - sketchWidth, height * 0.5, sketchWidth, sketchHeight);
     image(displaceTextFbo, width * 0.5, height * 0.5, sketchWidth, sketchHeight);
@@ -261,7 +263,8 @@ function setup() {
 
         let textElem = createElement('a', strArr[i]);
         textElem.style('color', 'white');
-        textElem.style('font-size', '4vh');
+        isMobile ? textElem.style('font-size', '3vw') : textElem.style('font-size', '4vh'); 
+        
         textElem.style('font-family', 'Custom Font');
         textElem.posY = textElemPosYOffset + textElemPosYIncrement * i;
         textElem.posX = width * 0.25 + map(noise(noiseIncrement * noiseStep), 0, 1, -200, 200);
@@ -278,7 +281,7 @@ function setup() {
         let textElem = createElement('a', strArr[0]);
         textElem.style('color', 'rgb(100, 100, 100)');
         textElem.style('opacity', '90');
-        textElem.style('font-size', '4vh')
+        isMobile ? textElem.style('font-size', '3vw') : textElem.style('font-size', '4vh');
         textElem.style('font-family', 'Custom Font');
         textElem.posY = i * textElemPosYIncrement + textElemPosYOffset;
         textElem.posX = width * 0.25 + map(noise(noiseIncrement * noiseStep), 0, 1, -200, 200);
@@ -295,7 +298,7 @@ function setup() {
         let textElem = createElement('a', strArr[i + 5]);
         textElem.style('color', 'white');
         textElem.style('opacity', '90');
-        textElem.style('font-size', '4vh')
+        isMobile ? textElem.style('font-size', '3vw') : textElem.style('font-size', '4vh');
         textElem.style('font-family', 'Custom Font');
         textElem.posY = i * textElemPosYIncrement + textElemPosYOffset;
         textElem.posX = width * 0.25 + map(noise(noiseIncrement * noiseStep), 0, 1, -200, 200);
@@ -312,7 +315,7 @@ function setup() {
         let textElem = createElement('a', strArr[0]);
         textElem.style('color', 'rgb(100, 100, 100)');
         textElem.style('opacity', '90');
-        textElem.style('font-size', '4vh')
+        isMobile ? textElem.style('font-size', '3vw') : textElem.style('font-size', '4vh');
         textElem.style('font-family', 'Custom Font');
         textElem.posY = i * textElemPosYIncrement + textElemPosYOffset;
         textElem.posX = width * 0.25 + map(noise(noiseIncrement * noiseStep), 0, 1, -200, 200);
@@ -329,7 +332,7 @@ function setup() {
         let textElem = createElement('a', strArr[i + 8]);
         textElem.style('color', 'white');
         textElem.style('opacity', '90');
-        textElem.style('font-size', '4vh')
+        isMobile ? textElem.style('font-size', '3vw') : textElem.style('font-size', '4vh');
         textElem.style('font-family', 'Custom Font');
         textElem.posY = i * textElemPosYIncrement + textElemPosYOffset;
         textElem.posX = width * 0.25 + map(noise(noiseIncrement * noiseStep), 0, 1, -200, 200);
@@ -346,7 +349,7 @@ function setup() {
         let textElem = createElement('a', strArr[0]);
         textElem.style('color', 'rgb(100, 100, 100)');
         textElem.style('opacity', '90');
-        textElem.style('font-size', '4vh')
+        isMobile ? textElem.style('font-size', '3vw') : textElem.style('font-size', '4vh');
         textElem.style('font-family', 'Custom Font');
         textElem.posY = i * textElemPosYIncrement + textElemPosYOffset;
         textElem.posX = width * 0.25 + map(noise(noiseIncrement * noiseStep), 0, 1, -200, 200);
@@ -363,7 +366,7 @@ function setup() {
         let textElem = createElement('a', strArr[i + 15]);
         textElem.style('color', 'white');
         textElem.style('opacity', '90');
-        textElem.style('font-size', '4vh')
+        isMobile ? textElem.style('font-size', '3vw') : textElem.style('font-size', '4vh');
         textElem.style('font-family', 'Custom Font');
         textElem.posY = i * textElemPosYIncrement + textElemPosYOffset;
         textElem.posX = width * 0.25 + map(noise(noiseIncrement * noiseStep), 0, 1, -200, 200);
@@ -380,7 +383,7 @@ function setup() {
         let textElem = createElement('a', strArr[0]);
         textElem.style('color', 'rgb(100, 100, 100)');
         textElem.style('opacity', '90');
-        textElem.style('font-size', '4vh')
+        isMobile ? textElem.style('font-size', '3vw') : textElem.style('font-size', '4vh');
         textElem.style('font-family', 'Custom Font');
         textElem.posY = i * textElemPosYIncrement + textElemPosYOffset;
         textElem.posX = width * 0.25 + map(noise(noiseIncrement * noiseStep), 0, 1, -200, 200);
@@ -428,6 +431,18 @@ function setup() {
     ON OUR CLIENTS' REQUESTS
     */
 
+    
+    //console.log(isMobile);
+    if (isMobile){
+        pixelDensity(0.75);
+        noiseGenFbo.pixelDensity(0.75);
+        noiseDispFbo.pixelDensity(0.75);
+        displaceFbo.pixelDensity(0.75);
+        displaceTextFbo.pixelDensity(0.75);
+        backgroundFbo.pixelDensity(0.75);
+        textFbo.pixelDensity(0.75);
+    }
+
 }
 
 function draw() {
@@ -442,13 +457,19 @@ function draw() {
         imgElem.appearAnimation();
     })
     */
+     // mouse movement only available on web due to overflow issues
+     
+     if (!isMobile){
+        textElemArr.forEach(function (textElem, i) {
 
-    textElemArr.forEach(function (textElem, i) {
-        textElem.posX += map(noise(i * 0.1 + frameCount * 0.01), 0, 1, -2, 2);
-        let d = dist(textElem.posX, textElem.posY, mouseX, mouseY);
-        textElem.posX += (mouseX - textElem.posX) / d;
-        textElem.position(textElem.posX, textElem.posY);
-    })
+            textElem.posX += map(noise(i * 0.1 + frameCount * 0.01), 0, 1, -2, 2);
+            let d = dist(textElem.posX, textElem.posY, mouseX, mouseY);
+            textElem.posX += (mouseX - textElem.posX) / d;
+            textElem.position(textElem.posX, textElem.posY);
+    
+        })
+     }
+
 
     let currentVisibleIndex = int(frameCount * 0.25);
     if (currentVisibleIndex < textElemArr.length) {

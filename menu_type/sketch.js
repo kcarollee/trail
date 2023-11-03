@@ -97,6 +97,18 @@ function setup() {
     charPosX;
     charPosY;
     imageMode(CENTER);
+
+    let isMobile = /iPhone|iPad|iPod|Android/i.test(window.navigator.userAgent);
+    //console.log(isMobile);
+    if (isMobile){
+        pixelDensity(0.75);
+        noiseGenFbo.pixelDensity(0.75);
+        noiseDispFbo.pixelDensity(0.75);
+        displaceFbo.pixelDensity(0.75);
+        displaceTextFbo.pixelDensity(0.75);
+        backgroundFbo.pixelDensity(0.75);
+        textFbo.pixelDensity(0.75);
+    }
 }
 
 function draw() {

@@ -108,13 +108,18 @@ function setup() {
     charPosY;
     imageMode(CENTER);
 
-    pixelDensity(1);
-    noiseGenFbo.pixelDensity(1);
-    noiseDispFbo.pixelDensity(1);
-    displaceFbo.pixelDensity(1);
-    displaceTextFbo.pixelDensity(1);
-    backgroundFbo.pixelDensity(1);
-    textFbo.pixelDensity(1);
+    let isMobile = /iPhone|iPad|iPod|Android/i.test(window.navigator.userAgent);
+    //console.log(isMobile);
+    if (isMobile){
+        pixelDensity(0.75);
+        noiseGenFbo.pixelDensity(0.75);
+        noiseDispFbo.pixelDensity(0.75);
+        displaceFbo.pixelDensity(0.75);
+        displaceTextFbo.pixelDensity(0.75);
+        backgroundFbo.pixelDensity(0.75);
+        textFbo.pixelDensity(0.75);
+    }
+    
 }
 
 function draw() {
