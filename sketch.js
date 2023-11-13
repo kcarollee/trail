@@ -16,7 +16,8 @@ function preload() {
     displaceShader = loadShader('shaders/displaceShader.vert', 'shaders/displaceShader.frag');
     displaceShader2 = loadShader('shaders/displaceShader.vert', 'shaders/displaceShader.frag');
     backgroundNoiseShader = loadShader('shaders/displaceShader.vert', 'shaders/displaceShader.frag');
-    font = loadFont("fonts/helvetica.ttf");
+    //font = loadFont("fonts/helvetica.ttf");
+    font = loadFont("fonts/Gilroy-Medium.ttf");
 }
 
 
@@ -109,7 +110,7 @@ function setup() {
     imageMode(CENTER);
 
     let isMobile = /iPhone|iPad|iPod|Android/i.test(window.navigator.userAgent);
-    //console.log(isMobile);
+    console.log(isMobile);
     if (isMobile){
         pixelDensity(0.75);
         noiseGenFbo.pixelDensity(0.75);
@@ -144,8 +145,8 @@ function draw() {
     let bbox = font.textBounds(mainChar, 0, 0, sketchWidth);
     textFbo.text(mainChar, 0.5 * (sketchWidth), (bbox.h + sketchHeight) * 0.325);
 
-    // textImage.display();
-    // textImage.updatePos();
+    //textImage.display();
+    //textImage.updatePos();
 
     if (textImage.moveMode){
         if (textImage.prevPosX == textImage.posX){}
@@ -234,13 +235,17 @@ function draw() {
 
 function windowResized(){
     resizeCanvas(windowWidth, windowHeight)
+    
     sketchWidth = min(windowWidth, windowHeight) * 0.75;
     sketchHeight = sketchWidth;
     //textFbo.textSize(sketchWidth);
 
-    movableImagesArr.forEach(function(img){
-        
-    });
+    noiseGenFbo.resizeCanvas(sketchWidth, sketchHeight);
+    noiseDispFbo.resizeCanvas(sketchWidth, sketchHeight);
+    displaceFbo.resizeCanvas(sketchWidth, sketchHeight);
+    displaceTextFbo.resizeCanvas(sketchWidth, sketchHeight);
+    backgroundFbo.resizeCanvas(windowWidth, windowHeight);
+    textFbo.resizeCanvas(sketchWidth, sketchHeight);
 }
 
 function mousePressed(){

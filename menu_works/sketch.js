@@ -92,7 +92,10 @@ class ImageElement {
         this.imgElem.mouseOut(this.onMouseOut);
 
         this.appearAnimationTriggered = false;
-        console.log(this.imgElem);
+        //console.log(this.imgElem);
+
+        this.previousWindowWidth = windowWidth;
+        this.previousWindowHeight = windowHeight;
     }
 
     onMouseOver(){
