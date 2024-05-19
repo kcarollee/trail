@@ -238,9 +238,9 @@ function setup() {
         'THEIR CONTENTS AND USE THEM<br>',
         'IN THEIR OWN CREATIVE WAYS.<br>',
         // 6 ~ 8
-        'SHARE YOUR SOURCE MATERIALS<br>',
-        'WITH US AND THE RESULTS MAY<br>',
-        'BE SOMETHING UNPRECEDENTED.<br>',
+        'LEAD BY DUKWON KARL LEE, A <br>',
+        'COMPUTER SCIENCE AND VISUAL<br>',
+        'DESIGN DOUBLE MAJOR FROM UOS<br>',
         // 9 ~ 15
         'OUR SERVICES ARE AS FOLLOWS<br>',
         '__VIDEO MANIPULATION_______<br>',
@@ -250,8 +250,8 @@ function setup() {
         '______WEB BASED GRAPHICS___<br>',
         '__REAL TIME GRAPHICS_______<br>',
         // 16 ~ 17
-        'CONTACT US: trail@gmail.com<br>',
-        'INSTAGRAM: @traillll_services<br>',
+        'CONTACT: kcarollee31693@gmail.com<br>',
+        'INSTAGRAM: @kleemotfd<br>',
     ]
 
     let noiseIncrement = 0.2;
